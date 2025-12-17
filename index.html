@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaunchDarkly Feature Flag Example</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .container {
+      background: white;
+      padding: 8rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      min-width: 1400px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 6rem;
+      font-size: 5rem;
+      text-align: center;
+    }
+    .content-wrapper {
+      display: flex;
+      gap: 4rem;
+      align-items: flex-start;
+    }
+    .button-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 600px;
+    }
+    .info-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    #demo-button {
+      padding: 72px 160px;
+      font-size: 48px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background-color: #667eea;
+      color: white;
+    }
+    #demo-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .info-box {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+    .info-box h2 {
+      color: #333;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    .info-box p {
+      color: #666;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    .info-box pre {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LaunchDarkly Feature Flag Demo</h1>
+    <div class="content-wrapper">
+      <div class="button-section">
+        <div id="button-container"></div>
+      </div>
+      <div class="info-section">
+        <div class="info-box">
+          <h2>Connection Status</h2>
+          <div id="connection-status">
+            <p>Initializing LaunchDarkly...</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <h2>Feature Flag Status</h2>
+          <div id="flag-info">
+            <p>Loading...</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <h2>User Context</h2>
+          <pre id="user-context"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
+

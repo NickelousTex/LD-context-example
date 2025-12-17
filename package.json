@@ -1,0 +1,18 @@
+{
+  "name": "ld-context-example",
+  "version": "1.0.0",
+  "description": "Simple LaunchDarkly feature flag example",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "launchdarkly-js-client-sdk": "^3.1.3"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+
