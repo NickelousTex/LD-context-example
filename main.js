@@ -3,7 +3,7 @@ import * as LDClient from 'launchdarkly-js-client-sdk';
 // Set your LaunchDarkly Client ID here
 const CLIENT_ID = 'your-client-id-here';
 
-// Create a multi-context with user, role, organization, location, and favoriteColor
+// Create a multi-context with user, role, organization, location
 const multiContext = {
   kind: 'multi',
   user: {
@@ -32,9 +32,6 @@ const multiContext = {
     postal_code: '10001',
     region: 'NY',
     city: 'New York'
-  },
-  favoriteColor: {
-    key: 'blue'
   }
 };
 
