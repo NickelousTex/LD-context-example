@@ -1,6 +1,6 @@
-# LaunchDarkly Feature Flag Example
+# LaunchDarkly Context Targeting Example
 
-A simple example demonstrating LaunchDarkly client-side context usage with a feature flag button that appears/disappears and changes color based on the `show-button-color` flag.
+A simple example demonstrating context usage in LaunchDarkly with a feature flag button that appears/disappears and changes color based on the `show-button-color` flag.
 
 ## About Contexts
 

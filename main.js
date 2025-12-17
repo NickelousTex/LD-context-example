@@ -52,6 +52,10 @@ ldClient.on('ready', () => {
   updateButton();
 });
 
+ldClient.on('error', () => {
+  updateConnectionStatus('Error: Failed to connect to LaunchDarkly, check your client ID', '#dc3545');
+});
+
 ldClient.on('change', () => {
   updateButton();
 });
