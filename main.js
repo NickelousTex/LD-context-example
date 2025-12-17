@@ -3,21 +3,49 @@ import * as LDClient from 'launchdarkly-js-client-sdk';
 // Set your LaunchDarkly Client ID here
 const CLIENT_ID = 'your-client-id-here';
 
-// Create a basic user context
-const user = {
-  key: 'user-' + Math.random().toString(36).substr(2, 9),
-  name: 'Demo User',
-  anonymous: false
+// Create a multi-context with user, role, organization, location, and favoriteColor
+const multiContext = {
+  kind: 'multi',
+  user: {
+    key: 'user-' + Math.random().toString(36).slice(2, 11),
+    name: 'Demo User',
+    producerCode: '000GG321',
+    subProducerCode: '000GG32100001',
+    anonymous: false
+  },
+  role: {
+    key: 'admin',
+    impersonate: true
+  },
+  organization: {
+    key: 'org1',
+    releaseGroup: 'beta',
+    metadata: ['employee', 'agent', 'independent']
+  },
+  location: {
+    key: 'America/New_York',
+    name: 'New York',
+    country: 'US',
+    timezone: 'America/New_York',
+    latitude: 40.7128,
+    longitude: -74.0060,
+    postal_code: '10001',
+    region: 'NY',
+    city: 'New York'
+  },
+  favoriteColor: {
+    key: 'blue'
+  }
 };
+
+// Initialize LaunchDarkly client with multi-context
+const ldClient = LDClient.initialize(CLIENT_ID, multiContext);
 
 // Display user context
 function displayUserContext() {
   const userContextEl = document.getElementById('user-context');
-  userContextEl.textContent = JSON.stringify(user, null, 2);
+  userContextEl.textContent = JSON.stringify(multiContext, null, 2);
 }
-
-// Initialize LaunchDarkly client
-const ldClient = LDClient.initialize(CLIENT_ID, user);
 
 // Display user context immediately
 displayUserContext();
