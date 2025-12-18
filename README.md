@@ -11,7 +11,7 @@ A simple example demonstrating context usage in LaunchDarkly with a feature flag
 - **Use multi-contexts** to evaluate flags based on multiple entity types simultaneously
 - **Build sophisticated targeting rules** that go beyond simple user-based targeting
 
-This example uses user contexts to demonstrate how LaunchDarkly evaluates flags and serves different variations based on context data. To learn more about contexts, read the [LaunchDarkly Contexts Introduction](https://launchdarkly.com/docs/home/flags/contexts/intro).
+This example uses multi contexts to demonstrate how LaunchDarkly evaluates flags and serves different variations based on a wide variety of possible context data. To learn more about contexts, read the [LaunchDarkly Contexts Introduction](https://launchdarkly.com/docs/home/flags/contexts/intro).
 
 ## Setup
 
@@ -35,7 +35,7 @@ npm install
 
 3. Update the LaunchDarkly Client ID in `main.js`:
    - Open `main.js` and replace `'your-client-id-here'` with your actual LaunchDarkly Client ID. Get your Client ID from the main landing page by clicking the 3dots next to the environment you're working on for a drop down.
-   <inser image here>
+   ![Get Client ID](images/get-client-id.png)
 
 4. Run the development server:
 ```bash
